@@ -1,0 +1,398 @@
+################################################################################
+APPLICATIONS
+################################################################################
+
+# launch terminal
+super + alt + Return
+  urxvt
+
+# launch terminal with vim
+super + alt + e
+  urxvt -e vim
+
+# launch terminal with ranger
+super + alt + f
+  urxvt -e ranger
+
+# launch app launcher
+super + alt + d
+  j4-dmenu-desktop --dmenu="/usr/bin/rofi -dmenu -p"
+
+# launch run dialog
+super + alt + r
+  rofi -show run
+
+################################################################################
+FOCUS - NODES
+################################################################################
+
+# focus node under cursor: start
+~button1
+  bspc pointer -g focus
+
+# focus node: west
+super + h
+  bspc node -f west
+
+# focus node: south
+super + j
+  bspc node -f south
+
+# focus node: north
+super + k
+  bspc node -f north
+
+# focus node: east
+super + l
+  bspc node -f east
+
+# focus node: next
+super + bracketright
+  bspc node -f next
+
+# focus node: prev
+super + bracketleft
+  bspc node -f prev
+
+# focus node: last
+super + slash
+  bspc node -f last
+
+# focus node: older
+super + o
+  bspc wm -h off; \
+  bspc node older -f; \
+  bspc wm -h on
+
+# focus node: newer
+super + n
+  bspc wm -h off; \
+  bspc node newer -f; \
+  bspc wm -h on
+
+# focus node: parent
+super + p
+  bspc node -f @parent
+
+# focus node: brother
+super + b
+  bspc node -f @brother
+
+# focus node: first
+super + semicolon
+  bspc node -f @first
+
+# focus node: second
+super + apostrophe
+  bspc node -f @second
+
+# focus node: biggest
+super + g
+  bspc node -f biggest
+
+# show window switcher
+super + Tab
+  rofi -show window -modi=window
+
+################################################################################
+SWAP/SEND - NODES
+################################################################################
+
+# swap node: west
+super + shift + h
+  bspc node -s west
+
+# swap node: south
+super + shift + j
+  bspc node -s south
+
+# swap node: north
+super + shift + k
+  bspc node -s north
+
+# swap node: east
+super + shift + l
+  bspc node -s east
+
+# swap node: next
+super + shift + bracketright
+  bspc node -s next
+
+# swap node: prev
+super + shift + bracketleft
+  bspc node -s prev
+
+# swap node: last
+super + shift + slash
+  bspc node -s last
+
+# swap node: brother 
+super + shift + b
+  bspc node -s @brother
+
+# swap node: biggest
+super + shift + g
+  bspc node -s biggest
+
+# send node: desktop: 1
+super + shift + q
+  bspc node -d ^1
+
+# send node: desktop: 2
+super + shift + w
+  bspc node -d ^2
+
+# send node: desktop: 3
+super + shift + e
+  bspc node -d ^3
+
+# send node: desktop: 4
+super + shift + r
+  bspc node -d ^4
+
+# send node: desktop: 5
+super + shift + t
+  bspc node -d ^5
+
+# send node: desktop: 6
+super + shift + y
+  bspc node -d ^6
+
+# send node:  desktop: prev
+super + shift + a
+  bspc node -d prev
+
+# send node: desktop: next
+super + shift + d
+  bspc node -d next
+
+# send node: desktop: last
+super + shift + grave
+  bspc node -d last
+
+################################################################################
+FOCUS - DESKTOPS
+################################################################################
+
+# focus desktop: 1
+super + q
+  bspc desktop -f ^1
+
+# focus desktop: 2
+super + w
+  bspc desktop -f ^2
+
+# focus desktop: 3
+super + e
+  bspc desktop -f ^3
+
+# focus desktop: 4
+super + r
+  bspc desktop -f ^4
+
+# focus desktop: 5
+super + t
+  bspc desktop -f ^5
+
+# focus desktop: 6
+super + y
+  bspc desktop -f ^6
+
+# focus desktop: prev
+super + a
+  bspc desktop -f prev
+
+# focus desktop: next
+super + d
+  bspc desktop -f next
+
+# focus desktop: last
+super + grave
+  bspc desktop -f last
+
+################################################################################
+CLOSE NODE
+################################################################################
+
+# close targeted window
+super + ctrl + q
+  bspc node -c
+
+# kill targeted window
+super + shift + ctrl + q
+  bspc node -k
+
+
+
+################################################################################
+PRESELECT
+################################################################################
+
+# preselect ratio: 0.2
+super + ctrl + z
+  bspc node -o 0.2
+
+# preselect ratio: 0.4
+super + ctrl + x
+  bspc node -o 0.4
+
+# preselect ratio: 0.5
+super + ctrl + c
+  bspc node -o 0.5
+
+# preselect ratio: 0.6
+super + ctrl + v
+  bspc node -o 0.6
+
+# preselect ratio: 0.8
+super + ctrl + b
+  bspc node -o 0.8
+
+# preselect direction: west
+super + ctrl + a
+  bpsc node -p west
+
+# preselect direction: south
+super + ctrl + s
+  bspc node -p south
+
+# preselect direction: north
+super + ctrl + w
+  bspc node -p north
+
+# preselect direction: east
+super + ctrl + d
+  bspc node -p east
+
+# cancel preselect: focused node
+super + ctrl + space
+  bspc node -p cancel
+
+# cancel preselect: focused desktop
+super + shift + ctrl + space
+  bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+################################################################################
+NODE STATE/FLAGS
+################################################################################
+
+# set window state: tiled
+super + ctrl + t
+  bspc node -t tiled
+
+# set window state: pseudo_tiled
+super + ctrl + u
+  bspc node -t pseudo_tiled
+
+# set window state: floating
+super + ctrl + f
+  bspc node -t floating
+
+# set window state: fullscreen
+super + ctrl + g
+  bspc node -t fullscreen
+
+# set window flag: locked
+super + ctrl + y
+  bspc node -g locked
+
+# set window flag: sticky
+super + ctrl + i
+  bspc node -g sticky
+
+# set window flag: private
+super + ctrl + p
+  bspc node -g private
+
+################################################################################
+MOVE/RESIZE NODES
+################################################################################
+
+# expand tiled space: 10 units west
+super + ctrl + h
+  bspc node @west -r -10
+
+# expand tiled space: 10 units south
+super + ctrl + j
+  bspc node @south -r +10
+
+# expand tiled space: 10 units north
+super + ctrl + k
+  bspc node @north -r -10
+
+# expand tiled space: 10 units east
+super + ctrl + l
+  bspc node @east -r +10
+
+# contract tiled space: 10 units east
+super + shift + ctrl + h
+  bspc node @east -r -10
+
+# contract tiled space: 10 units north
+super + shift + ctrl + j
+  bspc node @north -r +10
+
+# contract tiled space: 10 units south
+super + shift + ctrl + k
+  bspc node @south -r -10
+
+# contract tiled space: 10 units west
+super + shift + ctrl + l
+  bspc node @west -r +10
+
+# move floating window: 20 units left
+super + shift + ctrl + a
+  xdo move -x -20
+
+# move floating window: 20 units down
+super + shift + ctrl + s
+  xdo move -y +20
+
+# move floating window: 20 units up
+super + shift + ctrl + w
+  xdo move -y -20
+
+# move floating window: 20 units right
+super + shift + ctrl + d
+  xdo move -x +20
+
+# move node under cursor: start
+super + ctrl + ~button1
+  ; bspc pointer -g move
+
+# resize_side node under cursor: start
+super + ctrl + ~button2
+  ; bspc pointer -g resize_side
+
+# resize_corner node under cursor: start
+super + ctrl + ~button3
+  ; bspc pointer -g resize_corner
+
+# move node under cursor: end
+super + ctrl + @button1
+  bspc pointer -u
+
+# resize_side node under cursor: end
+super + ctrl + @button2
+  bspc pointer -u
+
+# resize_corner node under cursor: end
+super + ctrl + @button3
+  bspc pointer -u
+
+################################################################################
+MISC
+################################################################################
+
+# alternate between tiled and monocle layout
+super + ctrl + Tab
+  bspc desktop -l next
+
+# reload sxhkdrc
+super + alt + shift + ctrl + r
+  pkill -USR1 -x sxhkd
+
+# quit bspwm
+super + alt + shift + ctrl + Escape
+  bspc
+quit
