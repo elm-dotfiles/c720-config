@@ -1,78 +1,54 @@
-" Note: Skip initialization for vim-tiny or vim-small.
-if 0 | endif
+" Vim-plug plugin setup
+" ########################
+call plug#begin('~/.vim/plugged')
+Plug 'bling/vim-airline'		" Better status bar
+Plug 'scrooloose/syntastic'		" Syntax checking
+Plug 'tpope/vim-fugitive'		" Better git
+Plug 'airblade/vim-gitgutter'		" Git gutter
+Plug 'scrooloose/nerdcommenter'		" Commenting shortcuts
+Plug 'chriskempson/base16-vim'		" Color Schemes
+call plug#end()
 
-if has('vim_starting')
-  if &compatible
-    set nocompatible               " Be iMproved
-  endif
+" General Settings
+set number			" Show line-numbers
+set relativenumber		" Show relative line numbers as well
+set cursorline			" Highlight the current line
+let mapleader = ","		" change map-leader to comma (default=\)
+set updatetime=250		" Update time: default=4; for gitgutter
 
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
+" Airline-status Settings
+" ######################## 
+set laststatus=2		" Allows airline-status to always appear
+let g:airline_powerline_fonts=1	" Use the powerline fonts
 
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
+" Syntastic Settings
+" ########################
 
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" My Bundles here:
-" Refer to |:NeoBundle-examples|.
-" Note: You don't set neobundle setting in .gvimrc!
-NeoBundle 'scrooloose/syntastic'		" syntax checking
-NeoBundle 'scrooloose/nerdcommenter'		" commenting
-NeoBundle 'tpope/vim-fugitive'			" improved git
-NeoBundle 'airblade/vim-gitgutter'		" gitgutter
-NeoBundle 'bling/vim-airline'			" better statusbar
-NeoBundle 'chriskempson/base16-vim'		" base16 colors
-call neobundle#end()
-
-" Required:
-filetype plugin indent on
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
-
-" End neobundle stuff
-
-" color scheme
-set t_Co=256		"Set colors 256
-set background=dark
-let base16colorspace=256
-colorscheme base16-default
-
-" enable line numbers
-set number
-
-" set the leader key: 
-let mapleader = ","		"default is \ many people choose ,
-
-" Set update time
-" Usefule for vim-gitgutter, as default update is 4 seconds
-set updatetime=250
-
-" Needed for airline
-set laststatus=2
-
-" Recommended statusline settings for syntastic
+" Statusline config
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+" Settings
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" syntastic checkers
-let g:syntastic_javascript_checkers = ['eslint'] 
+" Linters
 let g:syntastic_sql_checkers = ['sqlint']
+let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_html_checkers = ['jshint']
+let g:syntastic_less_checkers = ['lessc']
 let g:syntastic_jade_checkers = ['jade_lint']
-let g:syntastic_JSON_checkers = ['jsonlint']
-let g:syntastic_Markdown_checkers = ['mdl']
-let g:syntastic_LESS_checkers = ['lessc']
+let g:syntastic_json_checkers = ['jsonlint']
+let g:syntastic_markdown_checkers = ['mdl']
 let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_r_checkers = ['lint']
+let g:syntastic_enable_r_lintr_checker = 1
+
+" Base16 Settings
+" ########################
+set t_Co=256			" I don't know what this does
+set background=dark		" Dark/light variant
+let base16colorspace=256	" Enable 256 colors
+colorscheme base16-flat		" Choose color scheme
