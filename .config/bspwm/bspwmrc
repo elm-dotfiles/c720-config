@@ -16,3 +16,4 @@ bspc config normal_border_color "#7F8C8D"
 bspc config presel_feedback_color "#2ECC71"
 
 panel &
+panel_reloader &

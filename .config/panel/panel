@@ -27,8 +27,6 @@ clock -sf 'S%a %H:%M' > "$PANEL_FIFO" &
 
 panel_bar < "$PANEL_FIFO" | lemonbar -a 32 -n "$PANEL_WM_NAME" -g $BAR_GEO -f "$PANEL_FONT" -F "$COLOR_DEFAULT_FG" -B "$COLOR_DEFAULT_BG" | sh &
 
-panel_reloader &
-
 wid=$(xdo id -a "$PANEL_WM_NAME")
 tries_left=20
 while [ -z "$wid" -a "$tries_left" -gt 0 ] ; do
