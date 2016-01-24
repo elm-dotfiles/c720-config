@@ -1,0 +1,24 @@
+#!/usr/bin/fish
+
+# This script determines if there was a resolution change
+# It checks the resolution every second
+# Compares it with the previous resolution
+
+# PREV = current resolution
+set -x PREV (xdpyinfo  | grep 'dimensions:')
+while true
+	# NEXT = current resolution
+	set -x NEXT (xdpyinfo  | grep 'dimensions:')
+	# if PREV resolution != NEXT resolution reload panel
+	if [ $PREV != $NEXT ]
+		# need to kill both of these processes to get it to work
+		kill -9 (pgrep -x 'panel')
+		kill -9 (pgrep -x 'panel_bar')
+		kill -9 (pgrep -x 'lemonbar')
+		panel &
+	end
+	# PREV = NEXT
+	set -x PREV $NEXT
+	# Wait 1 second
+	sleep .25
+end

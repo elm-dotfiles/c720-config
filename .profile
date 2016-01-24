@@ -21,13 +21,24 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-# panel essentials and default theme for bspwm
+# bar env vars
 PANEL_FIFO=/tmp/panel-fifo
 PANEL_HEIGHT=24
-PANEL_FONT="Roboto Mono:size=10"
+PANEL_FONT="Roboto Mono:pixelsize=12:antialias=true:hinting=true"
 PANEL_WM_NAME=bspwm_panel
 export PANEL_FIFO PANEL_HEIGHT PANEL_FONT PANEL_WM_NAME
+
+# BSPWM env vars
+BSPWM_PAD="12"
+export BSPWM_PAD
+
+# add panel script to path
 export PATH=$PATH:/home/poco/.config/panel
 
-# default editor for ranger
-export EDITOR="vim"
+# ranger default text editor
+export EDITOR="nvim"
+
+# set lang/utf-8 stuff
+export LANG=en_US.utf8
+export LC_CTYPE=en_US.UTF-8
+unset LC_ALL

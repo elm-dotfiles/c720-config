@@ -136,27 +136,27 @@ super + shift + g
 
 # send node: desktop: 1
 super + shift + q
-  bspc node -d ^1
+  bspc node -d q
 
 # send node: desktop: 2
 super + shift + w
-  bspc node -d ^2
+  bspc node -d w
 
 # send node: desktop: 3
 super + shift + e
-  bspc node -d ^3
+  bspc node -d e
 
 # send node: desktop: 4
 super + shift + r
-  bspc node -d ^4
+  bspc node -d r
 
 # send node: desktop: 5
 super + shift + t
-  bspc node -d ^5
+  bspc node -d t
 
 # send node: desktop: 6
 super + shift + y
-  bspc node -d ^6
+  bspc node -d y
 
 # send node:  desktop: prev
 super + shift + a
@@ -176,27 +176,27 @@ FOCUS - DESKTOPS
 
 # focus desktop: 1
 super + q
-  bspc desktop -f ^1
+  bspc desktop -f q
 
 # focus desktop: 2
 super + w
-  bspc desktop -f ^2
+  bspc desktop -f w
 
 # focus desktop: 3
 super + e
-  bspc desktop -f ^3
+  bspc desktop -f e
 
 # focus desktop: 4
 super + r
-  bspc desktop -f ^4
+  bspc desktop -f r
 
 # focus desktop: 5
 super + t
-  bspc desktop -f ^5
+  bspc desktop -f t
 
 # focus desktop: 6
 super + y
-  bspc desktop -f ^6
+  bspc desktop -f y
 
 # focus desktop: prev
 super + a
@@ -250,7 +250,7 @@ super + ctrl + b
 
 # preselect direction: west
 super + ctrl + a
-  bpsc node -p west
+  bspc node -p west
 
 # preselect direction: south
 super + ctrl + s

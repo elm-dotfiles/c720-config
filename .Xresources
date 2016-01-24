@@ -1,67 +1,20 @@
-! Allow urxvt to copy & paste
+! allow copy & paste in urxvt
 URxvt.perl-ext-common: default,clipboard
 URxvt.iso14755: False
 URxvt.keysym.Shift-Control-C: perl:clipboard:copy
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
-URxvt.clipboard.copycmd:xsel -ib
+URxvt.clipboard.copycmd: xsel -ib
 URxvt.clipboard.pastecmd: xsel -ob
 
-! Urxvt remove scrollbar
+! URxvt no scrollbar
 URxvt.scrollBar: false
 
-! change urxvt font
-URxvt.font: xft:Roboto Mono:size=10
+! Regular font/ powerline regular font
+URxvt.font: xft:Roboto Mono:pixelsize=12:antialias=true:hinting=true,xft:Roboto Mono for Powerline:pixelsize=12:antialias=true:hinting=true
+! Bold font/ powerline bold font
+URxvt.boldFont: xft:Roboto Mono:style=bold:pixelsize=12:antialias=true:hinting=true,xft:Roboto Mono for Powerline:style=bold:pixelsize=12:antialias=true:hinting=true
+! Italics Font/ powerline italics font
+URxvt.italicFont: xft:Roboto Mono:style=italic:pixelsize=12:antialias=true:hinting=true,xft:Roboto Mono for Powerline:style=italic:pixelsize=12:antialias=true:hinting=true
 
-! add powerline font for vim
-! URxvt.font: xft:DejaVu Sans Mono for Powerline:size=11
-! Terminal Color Scheme
-! Base16 Flat
-! Scheme: Chris Kempson (http://chriskempson.com)
-
-#define base00 #2C3E50
-#define base01 #34495E
-#define base02 #7F8C8D
-#define base03 #95A5A6
-#define base04 #BDC3C7
-#define base05 #e0e0e0
-#define base06 #f5f5f5
-#define base07 #ECF0F1
-#define base08 #E74C3C
-#define base09 #E67E22
-#define base0A #F1C40F
-#define base0B #2ECC71
-#define base0C #1ABC9C
-#define base0D #3498DB
-#define base0E #9B59B6
-#define base0F #be643c
-
-*.foreground:   base05
-*.background:   base00
-*.cursorColor:  base05
-
-*.color0:       base00
-*.color1:       base08
-*.color2:       base0B
-*.color3:       base0A
-*.color4:       base0D
-*.color5:       base0E
-*.color6:       base0C
-*.color7:       base05
-
-*.color8:       base03
-*.color9:       base08
-*.color10:      base0B
-*.color11:      base0A
-*.color12:      base0D
-*.color13:      base0E
-*.color14:      base0C
-*.color15:      base07
-
-! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
-! use 'shell' template to set these if necessary
-*.color16:      base09
-*.color17:      base0F
-*.color18:      base01
-*.color19:      base02
-*.color20:      base04
-*.color21:      base06
+! Terminal Colors 
+#include "/home/poco/.config/theme/base16-xresources/base16-flat.dark.256.xresources"

@@ -1,15 +1,17 @@
-#load Xresources to theme urxvt
-xrdb -merge ~/.Xresources
-
-#remap search key to super_L
+# change search key to super
 xmodmap -e "keycode 133 = Super_L"
 
-#set background color
+# map left shift to esc on standalone
+xcape -e 'Shift_L=Escape'
+
+# merge and load Xresources
+xrdb merge ~/.Xresources
+
+# set background color
 hsetroot -solid "#2C3E50" &
 
-#launch hotkey daemon
-sxhkd -c /home/poco/.config/sxhkd/sxhkdrc &
+# start hotkey daemon
+sxhkd &
 
-#launch window manager
+# start window manager
 exec bspwm
-
