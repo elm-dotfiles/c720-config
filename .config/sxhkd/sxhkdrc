@@ -8,11 +8,11 @@ super + alt + Return
 
 # launch terminal with vim
 super + alt + e
-  urxvt -e nvim
+  urxvt -e fish -c nvim
 
 # launch terminal with ranger
 super + alt + f
-  urxvt -e ranger
+  urxvt -e fish -c ranger
 
 # launch app launcher
 super + alt + d
