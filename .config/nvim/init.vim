@@ -8,7 +8,6 @@ Plug 'airblade/vim-gitgutter'		" Git gutter
 Plug 'scrooloose/nerdcommenter'		" Commenting shortcuts
 Plug 'chriskempson/base16-vim'		" Color Schemes
 Plug 'dag/vim-fish'			" Fish syntax, etc
-Plug 'ap/vim-css-color'			" Css color highlights
 call plug#end()
 
 " General Settings
@@ -47,7 +46,7 @@ let g:syntastic_html_checkers = ['jshint']
 let g:syntastic_less_checkers = ['lessc']
 let g:syntastic_jade_checkers = ['jade_lint']
 let g:syntastic_json_checkers = ['jsonlint']
-let g:syntastic_markdown_checkers = ['mdl']
+let g:syntastic_markdown_checkers = ['mdl']		" TODO: setup
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_enable_r_lintr_checker = 1
 
@@ -66,4 +65,3 @@ autocmd FileType fish setlocal foldmethod=expr	" Folding
 
 " Various Package Settings
 " ########################
-let g:cssColorVimDoNotMessMyUpdatetime = 1	" Don't change update time
