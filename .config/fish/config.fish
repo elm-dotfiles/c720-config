@@ -4,6 +4,9 @@ set -g -x PATH /usr/local/bin $PATH
 # remove fish greeting
 set -g -x fish_greeting ''
 
+# set 256 color term
+set fish_term256 1
+
 # color scheme:
 eval sh $HOME/.config/theme/base16-shell/base16-flat.dark.sh
 
