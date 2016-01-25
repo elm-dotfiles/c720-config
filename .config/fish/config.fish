@@ -4,11 +4,28 @@ set -g -x PATH /usr/local/bin $PATH
 # remove fish greeting
 set -g -x fish_greeting ''
 
-# set 256 color term
-set fish_term256 1
+# COLOR SCHEME:
+########################
 
-# color scheme:
+# load colors
 eval sh $HOME/.config/theme/base16-shell/base16-flat.dark.sh
+
+# set prompt colors 
+set -g fish_color_normal      base0
+set -g fish_color_command     base0
+set -g fish_color_quote       cyan
+set -g fish_color_redirection base0
+set -g fish_color_end         base0
+set -g fish_color_error       red
+set -g fish_color_param       blue
+set -g fish_color_comment     base01
+set -g fish_color_match       cyan
+set -g fish_color_search_match "--background=$base02"
+set -g fish_color_operator    orange
+set -g fish_color_escape      cyan
+set -g fish_color_hostname    cyan
+set -g fish_color_cwd         yellow
+set -g fish_color_git         green
 
 # ALIASES
 ########################
