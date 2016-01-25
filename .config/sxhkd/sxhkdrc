@@ -8,7 +8,7 @@ super + alt + Return
 
 # launch terminal with vim
 super + alt + e
-  urxvt -e vim
+  urxvt -e nvim
 
 # launch terminal with ranger
 super + alt + f
