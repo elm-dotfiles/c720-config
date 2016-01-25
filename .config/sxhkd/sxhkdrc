@@ -171,11 +171,11 @@ super + shift + grave
   bspc node -d last
 
 # circulate nodes: forward
-super + shift + c
+super + shift + comma
   bspc node -C forward
 
 # circulate nodes: backward
-super + shift + x
+super + shift + m
   bspc node -C backward
 
 ################################################################################
@@ -395,6 +395,22 @@ MISC
 # alternate between tiled and monocle layout
 super + ctrl + Tab
   bspc desktop -l next
+
+# rotate tree: clockwise
+super + ctrl + comma
+  bspc node -R 90
+
+# rotate tree: counterclockwise
+super + ctrl + m
+  bspc node -R 270
+
+# flip tree: vertical
+super + ctrl + e
+  bspc node -F vertical
+
+# flip tree: horizontal
+super + ctrl + r
+  bspc node -F horizontal
 
 # reload sxhkdrc
 super + alt + shift + ctrl + r
