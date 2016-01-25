@@ -170,6 +170,14 @@ super + shift + d
 super + shift + grave
   bspc node -d last
 
+# circulate nodes: forward
+super + shift + c
+  bspc node -C forward
+
+# circulate nodes: backward
+super + shift + x
+  bspc node -C backward
+
 ################################################################################
 FOCUS - DESKTOPS
 ################################################################################
