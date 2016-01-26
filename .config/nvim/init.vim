@@ -8,6 +8,7 @@ Plug 'airblade/vim-gitgutter'		" Git gutter
 Plug 'scrooloose/nerdcommenter'		" Commenting shortcuts
 Plug 'chriskempson/base16-vim'		" Color Schemes
 Plug 'dag/vim-fish'			" Fish syntax, etc
+Plug 'pangloss/vim-javascript'		" Javascript syntax
 call plug#end()
 
 " General Settings
