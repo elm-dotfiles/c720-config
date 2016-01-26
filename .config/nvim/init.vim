@@ -8,14 +8,18 @@ Plug 'airblade/vim-gitgutter'		" Git gutter
 Plug 'scrooloose/nerdcommenter'		" Commenting shortcuts
 Plug 'chriskempson/base16-vim'		" Color Schemes
 Plug 'dag/vim-fish'			" Fish syntax, etc
-Plug 'pangloss/vim-javascript'		" Javascript syntax
+Plug 'pangloss/vim-javascript'		" Javascript syntax 
+Plug 'suan/vim-instant-markdown'	" Instant markdown preview
 call plug#end()
+
+" Keybindings
+let mapleader = ","			" change map-leader to comma from \
+nmap <space> zz				" space centers current line
 
 " General Settings
 set number				" Show line-numbers
 set relativenumber			" Show relative line numbers as well
 set cursorline				" Highlight the current line
-let mapleader = ","			" change map-leader to comma (default=\)
 set updatetime=250			" Update time: default=4; for gitgutter
 syntax enable				" Enable syntax highlighting
 filetype plugin indent on		" filetype detection & plugins, indent scripts on
