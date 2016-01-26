@@ -4,7 +4,7 @@ APPLICATIONS
 
 # launch terminal
 super + alt + Return
-  urxvt
+  urxvt -e fish
 
 # launch terminal with vim
 super + alt + e
