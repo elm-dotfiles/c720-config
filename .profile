@@ -23,8 +23,8 @@ fi
 
 # bar env vars
 PANEL_FIFO=/tmp/panel-fifo
-PANEL_HEIGHT=24
-PANEL_FONT="Roboto Mono:pixelsize=10:antialias=true:hinting=true"
+PANEL_HEIGHT=20
+PANEL_FONT="Roboto Mono:pixelsize=11:antialias=true:hinting=true"
 PANEL_WM_NAME=bspwm_panel
 export PANEL_FIFO PANEL_HEIGHT PANEL_FONT PANEL_WM_NAME
 
