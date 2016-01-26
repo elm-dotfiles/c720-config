@@ -10,11 +10,11 @@ URxvt.clipboard.pastecmd: xsel -ob
 URxvt.scrollBar: false
 
 ! Regular font/ powerline regular font
-URxvt.font: xft:Roboto Mono:pixelsize=12:antialias=true:hinting=true,xft:Roboto Mono for Powerline:pixelsize=12:antialias=true:hinting=true
+URxvt.font: xft:Roboto Mono:pixelsize=11:antialias=true:hinting=true,xft:Roboto Mono for Powerline:pixelsize=11:antialias=true:hinting=true
 ! Bold font/ powerline bold font
-URxvt.boldFont: xft:Roboto Mono:style=bold:pixelsize=12:antialias=true:hinting=true,xft:Roboto Mono for Powerline:style=bold:pixelsize=12:antialias=true:hinting=true
+URxvt.boldFont: xft:Roboto Mono:style=bold:pixelsize=11:antialias=true:hinting=true,xft:Roboto Mono for Powerline:style=bold:pixelsize=11:antialias=true:hinting=true
 ! Italics Font/ powerline italics font
-URxvt.italicFont: xft:Roboto Mono:style=italic:pixelsize=12:antialias=true:hinting=true,xft:Roboto Mono for Powerline:style=italic:pixelsize=12:antialias=true:hinting=true
+URxvt.italicFont: xft:Roboto Mono:style=italic:pixelsize=11:antialias=true:hinting=true,xft:Roboto Mono for Powerline:style=italic:pixelsize=11:antialias=true:hinting=true
 
 ! Terminal Colors 
 #include "/home/poco/.config/theme/base16-xresources/base16-flat.dark.256.xresources"
