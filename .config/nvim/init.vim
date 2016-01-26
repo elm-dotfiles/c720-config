@@ -1,15 +1,15 @@
 " Vim-plug plugin setup
 " ########################
 call plug#begin('~/.vim/plugged')
-Plug 'bling/vim-airline'					" Better status bar
-Plug 'scrooloose/syntastic'					" Syntax checking
-Plug 'tpope/vim-fugitive'					" Better git
-Plug 'airblade/vim-gitgutter'					" Git gutter
-Plug 'scrooloose/nerdcommenter'					" Commenting shortcuts
-Plug 'chriskempson/base16-vim'					" Color Schemes
-Plug 'dag/vim-fish'						" Fish syntax, etc
-Plug 'pangloss/vim-javascript'					" Javascript syntax 
-Plug 'suan/vim-instant-markdown'				" Instant markdown preview
+Plug 'bling/vim-airline'						" Better status bar
+Plug 'scrooloose/syntastic'						" Syntax checking
+Plug 'tpope/vim-fugitive'						" Better git
+Plug 'airblade/vim-gitgutter'						" Git gutter
+Plug 'scrooloose/nerdcommenter'						" Commenting shortcuts
+Plug 'chriskempson/base16-vim'						" Color Schemes
+Plug 'dag/vim-fish'							" Fish syntax, etc
+Plug 'pangloss/vim-javascript'						" Javascript syntax 
+Plug 'suan/vim-instant-markdown'					" Instant markdown preview
 call plug#end()
 
 " Keybindings
@@ -24,6 +24,7 @@ set updatetime=250			" Update time: default=4; for gitgutter
 syntax enable				" Enable syntax highlighting
 filetype plugin indent on		" filetype detection & plugins, indent scripts on
 set timeoutlen=1000 ttimeoutlen=0 	" mapping delay, key code delay (for immediate return to normal mode)
+set shell=bash				" fish wont work right. set shell=bash
 
 " Airline-status Settings
 " ######################## 
@@ -70,3 +71,4 @@ autocmd FileType fish setlocal foldmethod=expr	" Folding
 
 " Various Package Settings
 " ########################
+let g:instant_markdown_autostart = 0		" vim-instant-markdown don't autoload
