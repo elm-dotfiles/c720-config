@@ -9,7 +9,6 @@ Plug 'scrooloose/nerdcommenter'						" Commenting shortcuts
 Plug 'chriskempson/base16-vim'						" Color Schemes
 Plug 'dag/vim-fish'							" Fish syntax, etc
 Plug 'pangloss/vim-javascript'						" Javascript syntax 
-Plug 'suan/vim-instant-markdown'					" Instant markdown preview
 call plug#end()
 
 " Keybindings
@@ -71,4 +70,3 @@ autocmd FileType fish setlocal foldmethod=expr	" Folding
 
 " Various Package Settings
 " ########################
-let g:instant_markdown_autostart = 0		" vim-instant-markdown don't autoload
