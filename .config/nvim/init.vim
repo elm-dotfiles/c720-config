@@ -1,15 +1,15 @@
 " Vim-plug plugin setup
 " ########################
 call plug#begin('~/.vim/plugged')
-Plug 'bling/vim-airline'		" Better status bar
-Plug 'scrooloose/syntastic'		" Syntax checking
-Plug 'tpope/vim-fugitive'		" Better git
-Plug 'airblade/vim-gitgutter'		" Git gutter
-Plug 'scrooloose/nerdcommenter'		" Commenting shortcuts
-Plug 'chriskempson/base16-vim'		" Color Schemes
-Plug 'dag/vim-fish'			" Fish syntax, etc
-Plug 'pangloss/vim-javascript'		" Javascript syntax 
-Plug 'suan/vim-instant-markdown'	" Instant markdown preview
+Plug 'bling/vim-airline'					" Better status bar
+Plug 'scrooloose/syntastic'					" Syntax checking
+Plug 'tpope/vim-fugitive'					" Better git
+Plug 'airblade/vim-gitgutter'					" Git gutter
+Plug 'scrooloose/nerdcommenter'					" Commenting shortcuts
+Plug 'chriskempson/base16-vim'					" Color Schemes
+Plug 'dag/vim-fish'						" Fish syntax, etc
+Plug 'pangloss/vim-javascript'					" Javascript syntax 
+Plug 'suan/vim-instant-markdown'				" Instant markdown preview
 call plug#end()
 
 " Keybindings
