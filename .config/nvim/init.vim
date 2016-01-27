@@ -76,4 +76,4 @@ autocmd FileType fish setlocal foldmethod=expr	" Folding
 
 " Various Package Settings
 " ########################
-let g:vim_markdown_folding_level = 3		" Make markdown fold at lvl 3
+let g:vim_markdown_folding_level = 1		" Make markdown fold at lvl 1
