@@ -1,14 +1,16 @@
 " Vim-plug plugin setup
 " ########################
 call plug#begin('~/.vim/plugged')
-Plug 'bling/vim-airline'						" Better status bar
-Plug 'scrooloose/syntastic'						" Syntax checking
-Plug 'tpope/vim-fugitive'						" Better git
-Plug 'airblade/vim-gitgutter'						" Git gutter
-Plug 'scrooloose/nerdcommenter'						" Commenting shortcuts
-Plug 'chriskempson/base16-vim'						" Color Schemes
-Plug 'dag/vim-fish'							" Fish syntax, etc
-Plug 'pangloss/vim-javascript'						" Javascript syntax 
+Plug 'bling/vim-airline'				" Better status bar
+Plug 'scrooloose/syntastic'				" Syntax checking
+Plug 'tpope/vim-fugitive'				" Better git
+Plug 'airblade/vim-gitgutter'				" Git gutter
+Plug 'scrooloose/nerdcommenter'				" Commenting shortcuts
+Plug 'chriskempson/base16-vim'				" Color Schemes
+Plug 'dag/vim-fish',
+	\ {"for": "fish"}				" Fish syntax, etc
+Plug 'pangloss/vim-javascript'					
+	\ {"for": "javascript"}				" Javascript syntax 
 call plug#end()
 
 " Keybindings
@@ -24,7 +26,11 @@ syntax enable				" Enable syntax highlighting
 filetype plugin indent on		" filetype detection & plugins, indent scripts on
 set timeoutlen=1000 ttimeoutlen=0 	" mapping delay, key code delay (for immediate return to normal mode)
 set shell=bash				" fish wont work right. set shell=bash
-
+autocmd BufNewFile,BufReadPost *.md 
+	\ set filetype=markdown		" Set .md files to be interpreted as markdown 
+let g:markdown_fenced_languages = 
+	\ ['html', 'python', 'bash=sh'
+	\ 'javascript', 'fish' ]	" Set fenced codeblock syntax highlighting
 " Airline-status Settings
 " ######################## 
 set laststatus=2		" Allows airline-status to always appear
