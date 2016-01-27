@@ -10,7 +10,9 @@ Plug 'chriskempson/base16-vim'				" Color Schemes
 Plug 'dag/vim-fish',
 	\ {"for": "fish"}				" Fish syntax, etc
 Plug 'pangloss/vim-javascript'					
-	\ {"for": "javascript"}				" Javascript syntax 
+	\ {"for": "javascript"}				" Javascript syntax
+Plug 'JamshedVesuna/vim-markdown-preview'
+	\ {"for": "markdown"}				" Markdown live preview
 call plug#end()
 
 " Keybindings
