@@ -31,7 +31,7 @@ set shell=bash				" fish wont work right. set shell=bash
 autocmd BufNewFile,BufReadPost *.md 
 	\ set filetype=markdown		" Set .md files to be interpreted as markdown 
 let g:markdown_fenced_languages = 
-	\ ['html', 'python', 'bash=sh'
+	\ ['html', 'python', 'bash=sh',
 	\ 'javascript', 'fish' ]	" Set fenced codeblock syntax highlighting
 " Airline-status Settings
 " ######################## 
