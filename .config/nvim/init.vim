@@ -7,12 +7,12 @@ Plug 'tpope/vim-fugitive'				" Better git
 Plug 'airblade/vim-gitgutter'				" Git gutter
 Plug 'scrooloose/nerdcommenter'				" Commenting shortcuts
 Plug 'chriskempson/base16-vim'				" Color Schemes
-Plug 'dag/vim-fish',
-	\ {"for": "fish"}				" Fish syntax, etc
-Plug 'pangloss/vim-javascript'					
-	\ {"for": "javascript"}				" Javascript syntax
-Plug 'JamshedVesuna/vim-markdown-preview'
-	\ {"for": "markdown"}				" Markdown live preview
+Plug 'dag/vim-fish'					" Fish syntax, etc
+Plug 'plasticboy/vim-markdown'				" Markdown syntax 
+Plug 'pangloss/vim-javascript',					
+	\ {'for': 'javascript'}				" Javascript syntax
+Plug 'JamshedVesuna/vim-markdown-preview',
+	\ {'for': 'markdown'}				" Markdown live preview
 call plug#end()
 
 " Keybindings
@@ -28,8 +28,6 @@ syntax enable				" Enable syntax highlighting
 filetype plugin indent on		" filetype detection & plugins, indent scripts on
 set timeoutlen=1000 ttimeoutlen=0 	" mapping delay, key code delay (for immediate return to normal mode)
 set shell=bash				" fish wont work right. set shell=bash
-autocmd BufNewFile,BufReadPost *.md 
-	\ set filetype=markdown		" Set .md files to be interpreted as markdown 
 let g:markdown_fenced_languages = 
 	\ ['html', 'python', 'bash=sh',
 	\ 'javascript', 'fish' ]	" Set fenced codeblock syntax highlighting
@@ -78,3 +76,4 @@ autocmd FileType fish setlocal foldmethod=expr	" Folding
 
 " Various Package Settings
 " ########################
+let g:vim_markdown_folding_level = 3		" Make markdown fold at lvl 3
