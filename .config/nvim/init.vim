@@ -7,6 +7,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'			" Git integration for nerdtree
 Plug 'scrooloose/syntastic'				" Syntax checking
 Plug 'tpope/vim-fugitive'				" Better git
 Plug 'airblade/vim-gitgutter'				" Git gutter
+Plug 'majutsushi/tagbar'				" Tag browser
 Plug 'scrooloose/nerdcommenter'				" Commenting shortcuts
 Plug 'tpope/vim-surround'				" Change surroundings
 Plug 'chriskempson/base16-vim'				" Color Schemes
@@ -23,6 +24,7 @@ call plug#end()
 " ########################
 let mapleader = ","			" change map-leader to comma from \
 nmap <space> zz				" space centers current line
+nmap <F8> :TagbarToggle<CR>		" tagbar
 
 " General Settings
 " ########################
@@ -63,7 +65,7 @@ let g:syntastic_html_checkers = ['jshint']
 let g:syntastic_less_checkers = ['lessc']
 let g:syntastic_jade_checkers = ['jade_lint']
 let g:syntastic_json_checkers = ['jsonlint']
-let g:syntastic_markdown_checkers = ['mdl']		" TODO: setup
+let g:syntastic_markdown_checkers = ['mdl']
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_enable_r_lintr_checker = 1
 
