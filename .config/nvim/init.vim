@@ -2,12 +2,15 @@
 " ########################
 call plug#begin('~/.vim/plugged')
 Plug 'bling/vim-airline'				" Better status bar
+Plug 'scrooloose/nerdtree'				" File browser
+Plug 'Xuyuanp/nerdtree-git-plugin'			" Git integration for nerdtree
 Plug 'scrooloose/syntastic'				" Syntax checking
 Plug 'tpope/vim-fugitive'				" Better git
 Plug 'airblade/vim-gitgutter'				" Git gutter
 Plug 'scrooloose/nerdcommenter'				" Commenting shortcuts
 Plug 'chriskempson/base16-vim'				" Color Schemes
-Plug 'dag/vim-fish'					" Fish syntax, etc
+Plug 'dag/vim-fish',	
+	\ {'for': 'fish'}				" Fish syntax, etc
 Plug 'plasticboy/vim-markdown'				" Markdown syntax 
 Plug 'pangloss/vim-javascript',					
 	\ {'for': 'javascript'}				" Javascript syntax
@@ -16,10 +19,12 @@ Plug 'JamshedVesuna/vim-markdown-preview',
 call plug#end()
 
 " Keybindings
+" ########################
 let mapleader = ","			" change map-leader to comma from \
 nmap <space> zz				" space centers current line
 
 " General Settings
+" ########################
 set number				" Show line-numbers
 set relativenumber			" Show relative line numbers as well
 set cursorline				" Highlight the current line
@@ -77,3 +82,4 @@ autocmd FileType fish setlocal foldmethod=expr	" Folding
 " Various Package Settings
 " ########################
 let g:vim_markdown_folding_level = 1		" Make markdown fold at lvl 1
+let vim_markdown_preview_github=1		" Markdown preview: github flavor
