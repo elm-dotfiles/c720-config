@@ -27,7 +27,7 @@ call plug#end()
 let mapleader = ","			" change map-leader to comma from \
 nmap <space> zz				" space centers current line
 nmap <F8> :TagbarToggle<CR>		" tagbar
-nmap <F10> :NERDTreeToggle		" Toggle NERDTree
+nmap <F10> :NERDTreeToggle<CR>		" Toggle NERDTree
 
 " General Settings
 " ########################
