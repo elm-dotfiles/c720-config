@@ -5,6 +5,8 @@ Plug 'bling/vim-airline'				" Better status bar
 Plug 'scrooloose/nerdtree'				" File browser
 Plug 'Xuyuanp/nerdtree-git-plugin'			" Git integration for nerdtree
 Plug 'scrooloose/syntastic'				" Syntax checking
+Plug 'Valloric/YouCompleteMe', 
+	\ { 'do': './install.py --tern-completer' }	" Autocomplete
 Plug 'tpope/vim-fugitive'				" Better git
 Plug 'airblade/vim-gitgutter'				" Git gutter
 Plug 'majutsushi/tagbar'				" Tag browser
