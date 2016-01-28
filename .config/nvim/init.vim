@@ -8,10 +8,11 @@ Plug 'scrooloose/syntastic'				" Syntax checking
 Plug 'tpope/vim-fugitive'				" Better git
 Plug 'airblade/vim-gitgutter'				" Git gutter
 Plug 'scrooloose/nerdcommenter'				" Commenting shortcuts
+Plug 'tpope/vim-surround'				" Change surroundings
 Plug 'chriskempson/base16-vim'				" Color Schemes
 Plug 'dag/vim-fish',	
 	\ {'for': 'fish'}				" Fish syntax, etc
-Plug 'plasticboy/vim-markdown'				" Markdown syntax 
+Plug 'plasticboy/vim-markdown'
 Plug 'pangloss/vim-javascript',					
 	\ {'for': 'javascript'}				" Javascript syntax
 Plug 'JamshedVesuna/vim-markdown-preview',
