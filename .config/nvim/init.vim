@@ -26,8 +26,9 @@ call plug#end()
 " ########################
 let mapleader = ","			" change map-leader to comma from \
 nmap <space> zz				" space centers current line
-nmap <F8> :TagbarToggle<CR>		" tagbar
+map <F8> :TagbarToggle<CR>		" tagbar
 map <F10> :NERDTreeToggle<CR>		" Toggle NERDTree
+nnoremap <F2> :set norelativenumber!<CR>" Toggle relativenumber
 
 " Custom Commands
 " ########################
