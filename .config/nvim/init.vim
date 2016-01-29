@@ -45,7 +45,6 @@ let g:markdown_fenced_languages =
 
 " Custom Commands
 " ########################
-command -nargs=1 Gwcp Gwrite | silent !git commit -m <f-args>| Git push
 
 " Airline-status Settings
 " ######################## 
