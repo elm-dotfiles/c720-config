@@ -29,6 +29,10 @@ nmap <space> zz				" space centers current line
 nmap <F8> :TagbarToggle<CR>		" tagbar
 map <F10> :NERDTreeToggle<CR>		" Toggle NERDTree
 
+" Custom Commands
+" ########################
+command Gwc Gwrite | Gcommit
+
 " General Settings
 " ########################
 set number				" Show line-numbers
