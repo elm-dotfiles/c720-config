@@ -45,7 +45,7 @@ let g:markdown_fenced_languages =
 
 " Custom Commands
 " ########################
-command -nargs=1 Gwcp Gwrite | Git commit -m <f-args>| call feedkeys("\<CR>")  
+command -nargs=1 Gwcp Gwrite | silent !git commit -m <f-args>| Gcommit
 
 " Airline-status Settings
 " ######################## 
