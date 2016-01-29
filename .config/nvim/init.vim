@@ -32,6 +32,7 @@ map <F10> :NERDTreeToggle<CR>		" Toggle NERDTree
 " Custom Commands
 " ########################
 command Gwc Gwrite | Gcommit
+command TrimWhiteSpace %s/\s\+$//
 
 " General Settings
 " ########################
