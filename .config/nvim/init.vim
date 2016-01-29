@@ -27,7 +27,7 @@ call plug#end()
 let mapleader = ","			" change map-leader to comma from \
 nmap <space> zz				" space centers current line
 nmap <F8> :TagbarToggle<CR>		" tagbar
-nmap <F10> :NERDTreeToggle<CR>		" Toggle NERDTree
+map <F10> :NERDTreeToggle<CR>		" Toggle NERDTree
 
 " General Settings
 " ########################
@@ -42,6 +42,11 @@ set shell=bash				" fish wont work right. set shell=bash
 let g:markdown_fenced_languages = 
 	\ ['html', 'python', 'bash=sh',
 	\ 'javascript', 'fish' ]	" Set fenced codeblock syntax highlighting
+
+" Custom Commands
+" ########################
+command -nargs=1 Gwcp Gwrite | Git commit -m <f-args> 
+
 " Airline-status Settings
 " ######################## 
 set laststatus=2		" Allows airline-status to always appear
