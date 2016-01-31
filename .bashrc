@@ -114,5 +114,5 @@ if ! shopt -oq posix; then
 fi
 
 # nvm and node env vars
-export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="/opt/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
