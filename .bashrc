@@ -112,7 +112,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-# nvm and node env vars
-export NVM_DIR="/opt/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm

@@ -1,10 +1,6 @@
 # add /usr/local/bin to path
 set -g -x PATH /usr/local/bin $PATH
 
-# set nvm path/ node and nvm env vars
-set -x NVM_DIR ~/.nvm
-source $NVM_DIR/nvm.fish
-
 # remove fish greeting
 set -g -x fish_greeting ''
 
