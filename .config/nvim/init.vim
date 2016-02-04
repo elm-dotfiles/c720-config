@@ -14,13 +14,13 @@ Plug 'scrooloose/nerdcommenter'				" Commenting shortcuts
 Plug 'tpope/vim-surround'				" Change surroundings
 Plug 'chriskempson/base16-vim'				" Color Schemes
 Plug 'Raimondi/delimitMate',
-	\ {'for': 'javascript'}				" Autoclose brackets/parens
+	\ {'for': 'javaScript'}				" Autoclose brackets/parens
 Plug 'pangloss/vim-javascript',					
-	\ {'for': 'javascript'}				" Javascript syntax
+	\ {'for': 'javaScript'}				" Javascript syntax
 Plug 'othree/javascript-libraries-syntax.vim',
-	\ {'for': 'javascript'}				" syntax for common js-libs
+	\ {'for': 'javaScript'}				" syntax for common js-libs
 Plug 'ternjs/tern_for_vim',
-	\ {'for': 'javascript'}				" Provides docs
+	\ {'for': 'javaScript'}				" Provides docs
 Plug 'dag/vim-fish',
 	\ {'for': 'fish'}				" Fish syntax, etc
 Plug 'JamshedVesuna/vim-markdown-preview',
@@ -107,7 +107,8 @@ autocmd FileType fish setlocal foldmethod=expr	" Folding
 
 " Various Package Settings
 " ########################
-let g:vim_markdown_folding_level = 1		" Make markdown fold at lvl 1
-let vim_markdown_preview_github=1		" Markdown preview: github flavor
+let g:vim_markdown_folding_level = 1				" Make markdown fold at lvl 1
+let vim_markdown_preview_github=1				" Markdown preview: github flavor
 let g:used_javascript_libs =
-	\ 'lodash,angularjs,angularui'		" Defs to load for js
+	\ 'lodash,angularjs,angularui'				" Defs to load for js
+autocmd FileType javaScript setlocal foldmethod=syntax		" Folding
