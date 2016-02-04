@@ -13,15 +13,15 @@ Plug 'majutsushi/tagbar'				" Tag browser
 Plug 'scrooloose/nerdcommenter'				" Commenting shortcuts
 Plug 'tpope/vim-surround'				" Change surroundings
 Plug 'chriskempson/base16-vim'				" Color Schemes
-Plug 'Raimondi/delimitMate'
+Plug 'Raimondi/delimitMate',
 	\ {'for': 'javascript'}				" Autoclose brackets/parens
 Plug 'pangloss/vim-javascript',					
 	\ {'for': 'javascript'}				" Javascript syntax
-Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'othree/javascript-libraries-syntax.vim',
 	\ {'for': 'javascript'}				" syntax for common js-libs
-Plug 'ternjs/tern_for_vim'
+Plug 'ternjs/tern_for_vim',
 	\ {'for': 'javascript'}				" Provides docs
-Plug 'dag/vim-fish',	
+Plug 'dag/vim-fish',
 	\ {'for': 'fish'}				" Fish syntax, etc
 Plug 'JamshedVesuna/vim-markdown-preview',
 Plug 'plasticboy/vim-markdown'
