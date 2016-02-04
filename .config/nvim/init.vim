@@ -49,6 +49,10 @@ set shell=bash				" fish wont work right. set shell=bash
 let g:markdown_fenced_languages = 
 	\ ['html', 'python', 'bash=sh',
 	\ 'javascript', 'fish' ]	" Set fenced codeblock syntax highlighting
+autocmd Filetype javascript
+	\ setlocal tabstop=4		" Set the tab length to 4 for javascript
+autocmd Filetype javascript
+	\ setlocal shiftwidth=4		" Set js shiftwidth to 4
 
 " Custom Commands
 " ########################
