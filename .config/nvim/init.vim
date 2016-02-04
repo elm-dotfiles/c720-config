@@ -14,13 +14,13 @@ Plug 'scrooloose/nerdcommenter'				" Commenting shortcuts
 Plug 'tpope/vim-surround'				" Change surroundings
 Plug 'chriskempson/base16-vim'				" Color Schemes
 Plug 'Raimondi/delimitMate',
-	\ {'for': 'javaScript'}				" Autoclose brackets/parens
+	\ {'for': 'javascript'}				" Autoclose brackets/parens
 Plug 'pangloss/vim-javascript',					
-	\ {'for': 'javaScript'}				" Javascript syntax
+	\ {'for': 'javascript'}				" Javascript syntax
 Plug 'othree/javascript-libraries-syntax.vim',
-	\ {'for': 'javaScript'}				" syntax for common js-libs
+	\ {'for': 'javascript'}				" syntax for common js-libs
 Plug 'ternjs/tern_for_vim',
-	\ {'for': 'javaScript'}				" Provides docs
+	\ {'for': 'javascript'}				" Provides docs
 Plug 'dag/vim-fish',
 	\ {'for': 'fish'}				" Fish syntax, etc
 Plug 'JamshedVesuna/vim-markdown-preview',
