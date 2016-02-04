@@ -24,7 +24,7 @@ Plug 'ternjs/tern_for_vim',
 Plug 'dag/vim-fish',
 	\ {'for': 'fish'}				" Fish syntax, etc
 Plug 'JamshedVesuna/vim-markdown-preview',
-Plug 'plasticboy/vim-markdown'
+Plug 'plasticboy/vim-markdown',
 	\ {'for': 'markdown'}				" Markdown live preview
 call plug#end()
 
