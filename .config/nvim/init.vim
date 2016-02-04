@@ -111,4 +111,4 @@ let g:vim_markdown_folding_level = 1				" Make markdown fold at lvl 1
 let vim_markdown_preview_github=1				" Markdown preview: github flavor
 let g:used_javascript_libs =
 	\ 'lodash,angularjs,angularui'				" Defs to load for js
-autocmd FileType javaScript setlocal foldmethod=syntax		" Folding
+autocmd FileType javascript setlocal foldmethod=indent		" Folding
