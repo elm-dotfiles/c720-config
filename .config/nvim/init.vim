@@ -12,6 +12,7 @@ Plug 'airblade/vim-gitgutter'				" Git gutter
 Plug 'majutsushi/tagbar'				" Tag browser
 Plug 'scrooloose/nerdcommenter'				" Commenting shortcuts
 Plug 'tpope/vim-surround'				" Change surroundings
+Plug 'Raimondi/delimitMate'				" Autoclose brackets/parens
 Plug 'chriskempson/base16-vim'				" Color Schemes
 Plug 'dag/vim-fish',	
 	\ {'for': 'fish'}				" Fish syntax, etc
