@@ -1,0 +1,3 @@
+. panel &
+. panel_reloader &
+trap 'trap - TERM; kill 0' INT TERM QUIT EXIT

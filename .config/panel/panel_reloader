@@ -20,5 +20,5 @@ while true
 	# PREV = NEXT
 	set -x PREV $NEXT
 	# Wait 1 second
-	sleep .25
+	sleep 1
 end
