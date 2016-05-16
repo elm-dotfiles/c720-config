@@ -134,29 +134,37 @@ super + shift + b
 super + shift + g
   bspc node -s biggest
 
-# send node: desktop: 1
+# send node: desktop: q
 super + shift + q
   bspc node -d q
 
-# send node: desktop: 2
+# send node: desktop: w
 super + shift + w
   bspc node -d w
 
-# send node: desktop: 3
+# send node: desktop: e
 super + shift + e
   bspc node -d e
 
-# send node: desktop: 4
+# send node: desktop: r
 super + shift + r
   bspc node -d r
 
-# send node: desktop: 5
+# send node: desktop: t
 super + shift + t
   bspc node -d t
 
-# send node: desktop: 6
+# send node: desktop: y
 super + shift + y
   bspc node -d y
+
+# send node: desktop: u
+super + shift + u
+  bspc node -d u
+
+# send node: desktop: i
+super + shift + i
+  bspc node -d i
 
 # send node:  desktop: prev
 super + shift + a
@@ -182,28 +190,36 @@ super + shift + m
 FOCUS - DESKTOPS
 ################################################################################
 
-# focus desktop: 1
+# focus desktop: q
 super + q
   bspc desktop -f q
 
-# focus desktop: 2
+# focus desktop: w
 super + w
   bspc desktop -f w
 
-# focus desktop: 3
+# focus desktop: e
 super + e
   bspc desktop -f e
 
-# focus desktop: 4
+# focus desktop: r
 super + r
   bspc desktop -f r
 
-# focus desktop: 5
+# focus desktop: t
 super + t
   bspc desktop -f t
 
-# focus desktop: 6
+# focus desktop: y
 super + y
+  bspc desktop -f y
+
+# focus desktop: u
+super + u
+  bspc desktop -f t
+
+# focus desktop: i
+super + i
   bspc desktop -f y
 
 # focus desktop: prev

@@ -1,8 +1,8 @@
 #! /bin/sh
 
 #get xres
-XRES=`xdpyinfo  | grep 'dimensions:' | sed -n -e 's/dimensions: *\([0-9]*\)x[0-9]* pixels.*/\1/p' | sed 's/ //g'`
-#XRES=`xrandr | grep 'eDP1 connected' | sed -n -e 's/eDP1 connected  *\([0-9]*\)x[0-9]*.*/\1/p' | sed 's/ //g'`
+#XRES=`xdpyinfo  | grep 'dimensions:' | sed -n -e 's/dimensions: *\([0-9]*\)x[0-9]* pixels.*/\1/p' | sed 's/ //g'`
+XRES=`xrandr | grep 'eDP1 connected' | sed -n -e 's/eDP1 connected  *\([0-9]*\)x[0-9]*.*/\1/p' | sed 's/ //g'`
 
 PANELW=$(( XRES - $((BSPWM_PAD * 2)) ))
 
@@ -19,7 +19,9 @@ trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
 [ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
 mkfifo "$PANEL_FIFO"
 
-bspc config top_padding $(( PANEL_HEIGHT + BSPWM_PAD ))
+bspc config -d ^1 top_padding $(( PANEL_HEIGHT + BSPWM_PAD ))
+bspc config -d ^2 top_padding 0
+
 bspc subscribe report > "$PANEL_FIFO" &
 xtitle -sf 'T%s' > "$PANEL_FIFO" &
 clock -sf 'S%a %H:%M' > "$PANEL_FIFO" &
